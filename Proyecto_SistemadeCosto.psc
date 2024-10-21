@@ -2,7 +2,7 @@ Proceso Proyect_SimuladorCosto
 	
 	definir cartera Como Caracter;
 	definir i Como entero;
-	definir color Como Caracter;
+	definir color como caracter;
 	Definir cantidad Como Entero;
 	Definir precio Como Real;
 	definir respuesta Como entero;
@@ -52,8 +52,17 @@ Proceso Proyect_SimuladorCosto
 	
 	Escribir"";
 	
-	Escribir "ingrese color:"; 
+	Repetir
+		
+	Escribir "Ingrese el color:"; 
 	leer color;
+	si (color <> "rojo" y  color <> "amarillo" y color <> "azul" y color <> "verde") Entonces
+		Escribir "";
+		Escribir "Color incorrecto";
+	FinSi
+	Hasta Que (color ="amarillo" o color ="rojo" o color = "azul" o color = "verde")  
+
+	Escribir "";
 	
 	Escribir "Ingrese la cantidad de productos que desea comprar:";
 	Leer cantidad;
